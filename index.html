@@ -1,0 +1,93 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liquidación de Sueldo</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="h1">
+            <h1 >RECIBO DE HABERES: </h1>
+            <p class="fecha">{{fecha_actual}}</p>
+        </div>
+        <table border="1">
+            
+            <thead class="top-info">
+                <tr>
+                    <td colspan="4" class="info"><strong>Información del Empleado:</strong></td>
+                </tr>
+                
+                <tr>
+                    <td scope="col"><strong>Nombre:</strong></td>
+                    <td>{{nombre}}</td>
+                    <td scope="col"><strong class="dni">CUIL:</strong></td>
+                    <td>{{cuil}}</td>
+                </tr>
+                
+                <tr>
+                    <td scope="col"><strong>Apellido:</strong></td>
+                    <td>{{apellido}}</td>
+                    <td scope="col"><strong>Fecha de Ingreso: </strong></td>
+                    <td>{{fechaDeIngreso}}</td>
+                </tr>
+        
+        
+                <tr>
+                    <td scope="col"><strong>Cargo:</strong></td>
+                    <td>{{cargo}}</td>
+                    <td scope="col"><strong>Obra Social</strong></td>
+                    <td>{{obraSocial}}</td>
+                </tr>
+        
+                <tr>
+                    <td><strong>Puesto:</strong></td>
+                    <td>{{puestoTrabajador}}</td>
+                    <td><strong>Años Antiguedad</strong></td>
+                    <td>{{añosAntiguedad}}</td>
+                </tr>
+            </thead>
+            <tr>
+                <td colspan="4" class="info"><strong>Detalles de Pago:</strong></td>
+            </tr>
+            <tr>
+                <td><strong>CONCEPTO</strong></td>
+                <td class="td"><strong>REMUNERACIONES</strong></td>
+                <td class="td"><strong>DEDUCCIONES</strong></td>
+            </tr>
+            <tr>
+                <td>Salario Base</td>
+                <td class="td">$3000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Horas Extra</td>
+                <td class="td">$500</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Obra Social</td>
+                <td></td>
+                <td class="td">-$500</td>
+            </tr>
+            <tr>
+                <td>Jubilacion</td>
+                <td></td>
+                <td class="td">-$200</td>
+            </tr>
+
+            <tr>
+                <td>Aporte Sindicato</td>
+                <td></td>
+                <td class="td">-$200</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td class="td"><strong>$3800</strong></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </body>
+    </html>

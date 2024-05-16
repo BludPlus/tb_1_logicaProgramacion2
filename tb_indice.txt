@@ -1,0 +1,29 @@
+Caso de uso Calculadora de Sueldo
+El empleado tiene un nombre, un apellido, un género (masculino o femenino)
+una fecha de nacimiento, una categoría de empleado, 
+es o no asociado a un sindicato.
+Además, tiene una fecha de ingreso a la empresa en la que trabaja y 
+un salario básico asignado.
+Desde el programa se debe poder realizar las siguientes operaciones: 
+
+
+(1) calcular la edad actual del empleado, 
+(2) calcular la antigüedad en la empresa, 
+(3) calcular las liquidación de sueldo.
+
+Nombre
+apellido 
+fecha de ingreso 
+sueldo bruto
+aporte sindical %
+estado civil
+Operaciones de descuento
+horas extra cuantas 
+normales
+feriados 100%
+arreglo con empleador
+valor fijo o porcentaje del sueldo basico
+Antiguedad 
+
+
+
