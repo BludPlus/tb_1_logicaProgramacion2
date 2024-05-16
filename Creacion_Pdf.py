@@ -1,11 +1,10 @@
-import pdfkit
-import jinja2
+import pdfkit;
+import jinja2;
+import Calculadora_Sueldos as cs;
 from datetime import datetime;
 
-today_date = datetime.today().strftime('%d %b,%Y')
-nombre = (input("Ingrese nombre: "))
-apellido = (input("Ingrese nombre: "))
-contenido = {'nombre':nombre}
+
+contenido = {'nombre':cs.nombre,'apellido':cs.apellido, 'fecha_actual': cs.fecha_actual}
 
 #Lectura del html con ninja y erea
 template_loader = jinja2.FileSystemLoader('./');
@@ -19,7 +18,7 @@ output_Text = template.render(contenido);
 
 config = pdfkit.configuration(wkhtmltopdf= '/usr/bin/wkhtmltopdf');
 
-output_pdf = nombre + apellido +".pdf";
+output_pdf = cs.nombre + cs.apellido +".pdf";
 
 
 pdfkit.from_string(output_Text,output_pdf,configuration=config, css='styles.css')
