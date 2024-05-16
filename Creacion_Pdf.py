@@ -1,12 +1,15 @@
 import pdfkit;
 import jinja2;
-import Calculadora_Sueldos as cs;
+import datosEmpleado as dem;
 from datetime import datetime;
 
 
-contenido = {'nombre':cs.nombre,'apellido':cs.apellido, 'fecha_actual': cs.fecha_actual}
+contenido = {'nombre':dem.nombre,
+             'apellido':dem.apellido,
+             'fecha_actual': dem.fecha_actual,
+             'cuil': dem.cuil}
 
-#Lectura del html con ninja y erea
+#Lectura del directorio y template html con ninja y erea
 template_loader = jinja2.FileSystemLoader('./');
 template_env=jinja2.Environment(loader=template_loader);
 
@@ -18,7 +21,7 @@ output_Text = template.render(contenido);
 
 config = pdfkit.configuration(wkhtmltopdf= '/usr/bin/wkhtmltopdf');
 
-output_pdf = cs.nombre + cs.apellido +".pdf";
+output_pdf = dem.nombre + dem.apellido +".pdf";
 
 
 pdfkit.from_string(output_Text,output_pdf,configuration=config, css='styles.css')
