@@ -7,7 +7,7 @@ fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
 os.system("clear")
 
 nombre = (input("Ingrese Nombre: "))
-apellido = (input("Ingrese Nombre: "))
+apellido = (input("Ingrese Apellido: "))
 os.system("clear")
 
 
@@ -89,4 +89,4 @@ fechaIngreso = f"{fechaDiaIngreso} - {fechaMesIngreso} - {fechaAñoIngreso} "
 
 añoAcual = datetime.today().strftime("%Y")
 añoAcualInt = int(añoAcual);
-añosAntiguedad =  añoAcualInt - añoAcual;
+añosAntiguedad =  añoAcualInt - fechaAñoIngreso;

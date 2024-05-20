@@ -21,6 +21,8 @@ contenido = {
             'dedu_jubilacion_efectivo': cR.dedu_jubilacion_efectivo,
             'dedu_impuestosganancias_porcentaje': cR.dedu_impuestosganancias_porcentaje,
             'dedu_impuestosganancias_efectivo': cR.dedu_impuestosganancias_efectivo,
+            'dedu_aporte_sindical_porcentaje' : cR.dedu_aporte_sindical_porcentaje,
+            'dedu_aporte_sindical_efectiv' : cR.dedu_aporte_sindical_efectivo,
             'total_a_cobrar': cR.total_a_cobrar
              }
 
