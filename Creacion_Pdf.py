@@ -1,13 +1,28 @@
 import pdfkit;
 import jinja2;
 import datosEmpleado as dem;
+import calculadoraRecibo as cR;
 from datetime import datetime;
 
 
-contenido = {'nombre':dem.nombre,
-             'apellido':dem.apellido,
-             'fecha_actual': dem.fecha_actual,
-             'cuil': dem.cuil}
+contenido = {
+             'nombre': dem.nombre,
+             'apellido': dem.apellido,
+             'fecha_actual':  cR.fecha_actual,
+             'cuil':  dem.cuil,
+             'cargo': dem.cargo,
+             'puestoTrabajador': dem.puesto,
+             'fechaDeIngreso': dem.fechaIngreso,
+             'añosAntiguedad': dem.añosAntiguedad,
+             'salario_base': cR.salario_base,
+            'remu_horas_extras': cR.remu_horas_extras,
+            'cantidadHoras':cR.cantidadHoras,
+            'dedu_jubilacion_porcentaje': cR.dedu_jubilacion_porcentaje,
+            'dedu_jubilacion_efectivo': cR.dedu_jubilacion_efectivo,
+            'dedu_impuestosganancias_porcentaje': cR.dedu_impuestosganancias_porcentaje,
+            'dedu_impuestosganancias_efectivo': cR.dedu_impuestosganancias_efectivo,
+            'total_a_cobrar': cR.total_a_cobrar
+             }
 
 #Lectura del directorio y template html con ninja y erea
 template_loader = jinja2.FileSystemLoader('./tb_1_logicaProgramacion2/');

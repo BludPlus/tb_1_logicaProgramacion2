@@ -75,33 +75,37 @@
             <tr>
                 <td>Horas Extra</td>
                 <td class="td">{{remu_horas_extras}}</td>
-                <td></td>
+                <td>{{cantidadHoras}}</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Obra Social</td>
                 <td></td><!-- REMU --> 
-                <td></td><!-- DEDU EN % -->
-                <td class="td">-{{dedu_horas_extras}}</td><!-- DEDU EN $ -->
+                <td>{{dedu_obrasocial_porcentaje}}</td><!-- DEDU EN % -->
+                <td class="td">-{{dedu_obrasocial_efectivo}}</td><!-- DEDU EN $ -->
             </tr>
             <tr>
                 <td>Jubilacion</td>
                 <td></td><!-- REMU -->
-                <td></td><!-- dedu en % -->
-                <td class="td">-$200</td><!-- dedu en $ -->
+                <td>{{dedu_jubilacion_porcentaje}}</td><!-- dedu en % -->
+                <td class="td">-{{dedu_jubilacion_efectivo}}</td><!-- dedu en $ -->
             </tr>
 
             <tr>
                 <td>Aporte Sindicato</td>
                 <td></td>
-                <td></td>
-                <td class="td">-$200</td>
+                <td>{{dedu_aporte_sindical_porcentaje}}</td>
+                <td class="td">-${{dedu_aporte_sindical_efectivo}}</td>
             </tr>
             <tr>
+                <td>Imp. Ganancias</td>
+                <td></td>
+                <td>{{dedu_impuestosganancias_porcentaje}}</td>
+                <td class="td">-${{dedu_impuestosganancias_efectivo}}</td>
+            </tr>
+            <tr class="total">
                 <td><strong>Total</strong></td>
-                <td></td> <!-- REMU -->
-                <td class="td"><strong>$3800</strong></td>
-                <td></td><!-- debu en $ -->
+                <td class="totalc" colspan="4"><strong>${{total_a_cobrar}}</strong></td>
             </tr>
         </table>
 

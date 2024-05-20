@@ -4,6 +4,7 @@ import os;
 from colorama import Fore;
 fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
 
+os.system("clear")
 
 nombre = (input("Ingrese Nombre: "))
 apellido = (input("Ingrese Nombre: "))
@@ -17,15 +18,24 @@ while (comprobacionCUIL < 1):
         
         print(Fore.WHITE + f"{nombre} {apellido}")
         cuil = int(input("Ingrese CUIL: "))
-        comprobacionCUIL += 1;
+
+        os.system("clear")
+        valorC = input(Fore.YELLOW + f"¿Su cuil es: {cuil} S/N \n")
+        if (valorC.lower() == "s"):
+            comprobacionCUIL += 1;
+        else:
+            os.system("clear")
+        
     except ValueError:
         os.system("clear")
         print(Fore.RED + "Ingrese Correctamente")
+    
+
 os.system("clear")
 
 
 
-print(Fore.WHITE + f"{nombre} {apellido}")
+print(Fore.WHITE + f"{nombre} {apellido} CUIL {cuil}")
 
 puesto = input("Ingrese el Puesto: ")
 cargo = input("Ingrese el Cargo: ")
@@ -65,9 +75,9 @@ while(comprobacionAñoIngreso < 1):
     print(seguroFecha.lower())
     if(seguroFecha.lower() == "s"):  
         comprobacionAñoIngreso += 1;
-        comprobacionAño +=1
     elif(seguroFecha.lower() == "n"):
         comprobacionFecha += 1;
+        comprobacionAño = 0;
         os.system("clear")
         print("Ingrese nuevamente la fecha de ingreso...")
         
@@ -75,5 +85,8 @@ while(comprobacionAñoIngreso < 1):
             os.system("clear")
             print(Fore.RED + "Ingrese S/N")
             
+fechaIngreso = f"{fechaDiaIngreso} - {fechaMesIngreso} - {fechaAñoIngreso} "
 
-
+añoAcual = datetime.today().strftime("%Y")
+añoAcualInt = int(añoAcual);
+añosAntiguedad =  añoAcualInt - añoAcual;
