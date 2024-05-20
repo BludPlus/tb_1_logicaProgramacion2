@@ -1,10 +1,10 @@
 import pdfkit;
 import jinja2;
 import datosEmpleado as dem;
-import calculadoraRecibo as cR;
 from datetime import datetime;
 
 
+<<<<<<< HEAD
 contenido = {
              'nombre': dem.nombre,
              'apellido': dem.apellido,
@@ -25,6 +25,12 @@ contenido = {
             'dedu_aporte_sindical_efectiv' : cR.dedu_aporte_sindical_efectivo,
             'total_a_cobrar': cR.total_a_cobrar
              }
+=======
+contenido = {'nombre':dem.nombre,
+             'apellido':dem.apellido,
+             'fecha_actual': dem.fecha_actual,
+             'cuil': dem.cuil}
+>>>>>>> parent of 6fecb81 (donde llegue antes de la clase)
 
 #Lectura del directorio y template html con ninja y erea
 template_loader = jinja2.FileSystemLoader('./tb_1_logicaProgramacion2/');

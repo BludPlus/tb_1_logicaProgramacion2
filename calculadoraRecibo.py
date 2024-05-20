@@ -1,6 +1,4 @@
 from datetime import datetime;
-import os;
-from colorama import Fore;
 
 fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
 total_a_cobrar  = 0;
