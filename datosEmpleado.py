@@ -63,10 +63,10 @@ while(comprobacionAñoIngreso < 1):
     seguroFecha = input("S/N: ");
     
     print(seguroFecha.lower())
-    if(seguroFecha.lower == "s"):  
-        comprobacionFecha += 1;
+    if(seguroFecha.lower() == "s"):  
+        comprobacionAñoIngreso += 1;
         comprobacionAño +=1
-    elif(seguroFecha.lower == "n"):
+    elif(seguroFecha.lower() == "n"):
         comprobacionFecha += 1;
         os.system("clear")
         print("Ingrese nuevamente la fecha de ingreso...")

@@ -10,7 +10,7 @@ contenido = {'nombre':dem.nombre,
              'cuil': dem.cuil}
 
 #Lectura del directorio y template html con ninja y erea
-template_loader = jinja2.FileSystemLoader('./');
+template_loader = jinja2.FileSystemLoader('./tb_1_logicaProgramacion2/');
 template_env=jinja2.Environment(loader=template_loader);
 
 html_template = 'index.html';
