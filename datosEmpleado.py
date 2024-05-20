@@ -6,7 +6,7 @@ fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
 
 
 nombre = (input("Ingrese Nombre: "))
-apellido = (input("Ingrese Apellido: "))
+apellido = (input("Ingrese Nombre: "))
 os.system("clear")
 
 
@@ -76,10 +76,9 @@ while(comprobacionAñoIngreso < 1):
             print(Fore.RED + "Ingrese S/N")
             
 
-<<<<<<< HEAD
 añoAcual = datetime.today().strftime("%Y")
 añoAcualInt = int(añoAcual);
-añosAntiguedad =  añoAcualInt - fechaAñoIngreso;
-=======
 
->>>>>>> parent of 6fecb81 (donde llegue antes de la clase)
+añosAntiguedad =  añoAcualInt - fechaAñoIngreso;
+
+
