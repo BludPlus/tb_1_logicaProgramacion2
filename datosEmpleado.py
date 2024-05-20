@@ -61,7 +61,7 @@ while(comprobacionAñoIngreso < 1):
         print(Fore.WHITE + f"{fechaDiaIngreso} - {fechaMesIngreso}- {fechaAñoIngreso}")
         seguroFecha = input("S/N: ");
         print(seguroFecha.lower)
-        if(seguroFecha.lower == "s"):
+        if(seguroFecha.lower == "s"):  #ERROR <built-in method lower of str object at 0x72dd1446fc70>
             comprobacionFecha += 1;
             comprobacionAño +=1
         elif(seguroFecha.lower == "n"):
