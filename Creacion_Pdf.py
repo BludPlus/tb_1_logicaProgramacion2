@@ -24,4 +24,4 @@ config = pdfkit.configuration(wkhtmltopdf= '/usr/bin/wkhtmltopdf');
 output_pdf = dem.nombre + dem.apellido +".pdf";
 
 
-pdfkit.from_string(output_Text,output_pdf,configuration=config, css='styles.css')
+pdfkit.from_string(output_Text,output_pdf,configuration=config, css='./tb_1_logicaProgramacion2/styles.css')
