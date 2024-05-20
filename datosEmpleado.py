@@ -26,8 +26,9 @@ os.system("clear")
 
 
 print(Fore.WHITE + f"{nombre} {apellido}")
-cargo = input("Ingrese el Cargo: ")
+
 puesto = input("Ingrese el Puesto: ")
+cargo = input("Ingrese el Cargo: ")
 os.system("clear")
 
 
@@ -56,20 +57,21 @@ while(comprobacionAñoIngreso < 1):
     os.system("clear")
     seguroFecha = "";
     comprobacionFecha = 0
-    while(comprobacionFecha < 1):
-        print(Fore.YELLOW + "¿Esta seguro de la fecha de ingreso? S/N")
-        print(Fore.WHITE + f"{fechaDiaIngreso} - {fechaMesIngreso}- {fechaAñoIngreso}")
-        seguroFecha = input("S/N: ");
-        print(seguroFecha.lower)
-        if(seguroFecha.lower == "s"):  #ERROR <built-in method lower of str object at 0x72dd1446fc70>
-            comprobacionFecha += 1;
-            comprobacionAño +=1
-        elif(seguroFecha.lower == "n"):
-            comprobacionFecha += 1;
-            os.system("clear")
-            print("Ingrese nuevamente la fecha de ingreso...")
-            
-        else:
+    
+    print(Fore.WHITE + f"{fechaDiaIngreso} - {fechaMesIngreso}- {fechaAñoIngreso}")
+    print(Fore.YELLOW + "¿Esta seguro de la fecha de ingreso? S/N")
+    seguroFecha = input("S/N: ");
+    
+    print(seguroFecha.lower())
+    if(seguroFecha.lower == "s"):  
+        comprobacionFecha += 1;
+        comprobacionAño +=1
+    elif(seguroFecha.lower == "n"):
+        comprobacionFecha += 1;
+        os.system("clear")
+        print("Ingrese nuevamente la fecha de ingreso...")
+        
+    else:
             os.system("clear")
             print(Fore.RED + "Ingrese S/N")
             
