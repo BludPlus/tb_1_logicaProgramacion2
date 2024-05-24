@@ -1,7 +1,6 @@
 import pdfkit;
 import jinja2;
 import datosEmpleado as dem;
-from datetime import datetime;
 import calculadoraRecibo as cR;
 
 

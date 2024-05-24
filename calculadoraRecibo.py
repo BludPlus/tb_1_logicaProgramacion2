@@ -1,8 +1,14 @@
 from datetime import datetime;
 import os;
 fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
-total_a_cobrar  = 0;
+
+
+cuenta  = 0;
+
+
 os.system("clear")
+
+
 salario_base = int(input("Ingrese salario: "))
 salarioTotal = salario_base;
 
@@ -54,4 +60,4 @@ if(aporteS.lower() == "s"):
 
 
 
-total_a_cobrar = salarioTotal;
+cuenta = salarioTotal;
