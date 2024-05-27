@@ -39,13 +39,13 @@ template_env=jinja2.Environment(loader=template_loader);
 
 html_template = 'index.html';
 
-template = template_env.get_template(html_template); #ERROR 0x72dd1446fc70>
+template = template_env.get_template(html_template); 
 
-output_Text = template.render(contenido);
+input_Text = template.render(contenido);
 
 config = pdfkit.configuration(wkhtmltopdf= '/usr/bin/wkhtmltopdf');
 
 output_pdf = dem.nombre + dem.apellido +".pdf";
 
 
-pdfkit.from_string(output_Text,output_pdf,configuration=config, css='./tb_1_logicaProgramacion2/styles.css')
+pdfkit.from_string(input_Text,output_pdf,configuration=config, css='./tb_1_logicaProgramacion2/styles.css')

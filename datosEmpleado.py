@@ -117,7 +117,7 @@ while(comprobacionAñoIngreso):
 
 
 
-año_de_ingreso = f"{fechaDiaIngreso} {fechaMesIngreso} {fechaAñoIngreso}"
+año_de_ingreso = f"{fechaDiaIngreso} - {fechaMesIngreso} - {fechaAñoIngreso}"
 
 añosAntiguedad =  añoAcual - fechaAñoIngreso;
 
