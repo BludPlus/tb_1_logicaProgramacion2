@@ -20,7 +20,7 @@ saldo_Cobrar = 0;
 
 while(True):
     try:
-        salario_base = float(input("Ingrese salario: "))
+        salario_base = float(input(Fore.RESET + "Ingrese salario: "))
         cuenta = salario_base;
         break
     except ValueError:
@@ -39,18 +39,33 @@ if(cuenta >= 500000):
     dedu_impuestosganancias_efectivo = cuenta * 0.11;
     
     
-
+os.system("clear")
+debu_obra_social_porcentaje = 0;
+dedu_obra_social_efectivo = 0;
+info_obra_social = "No posee";
+while(True):
+    obraSocial = input(Fore.RESET + "Posee obra social? S/N: ")
+    if(obraSocial.lower() == "s"):
+        debu_obra_social_porcentaje = 13;
+        dedu_obra_social_efectivo = cuenta * 0.13
+        info_obra_social = "O.S.E.C.A.C"
+        break
+    elif(obraSocial.lower() == "n"):
+        break
+    else:
+        os.system("clear")        
+        print(Fore.YELLOW + "Ingrese S/N")
 
 
 remu_horas_extras = 0;
 pagoHorasExtrasFeriados = 0;
 cantidad_horas = 0;
 
-
+os.system("clear")   
 comHorasEXtras = True;
 while(comHorasEXtras):
     
-    realizoExtras = input(Fore.WHITE + "Realizo horas extras? S/N \n")
+    realizoExtras = input(Fore.RESET + "Realizo horas extras? S/N \n")
     
     
     remu_horas_extras = 0;
@@ -142,8 +157,8 @@ if(aporteS.lower() == "s"):
     dedu_aporte_sindical_efectivo = cuenta * (dedu_aporte_sindical_porcentaje /100)
     
 
-debu_total_porcentaje = dedu_aporte_sindical_porcentaje + dedu_jubilacion_porcentaje + dedu_impuestosganancias_porcentaje;
-debu_Total = dedu_jubilacion_efectivo + dedu_aporte_sindical_efectivo + dedu_impuestosganancias_efectivo; 
+debu_total_porcentaje = debu_obra_social_porcentaje + dedu_aporte_sindical_porcentaje + dedu_jubilacion_porcentaje + dedu_impuestosganancias_porcentaje;
+debu_Total = dedu_obra_social_efectivo + dedu_jubilacion_efectivo + dedu_aporte_sindical_efectivo + dedu_impuestosganancias_efectivo; 
 saldo_Cobrar = cuenta - debu_Total + remu_horas_extras;
 
 

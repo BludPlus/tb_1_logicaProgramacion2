@@ -15,7 +15,7 @@ os.system("clear")
 
 
 while(True):
-    nombre = (input(Fore.WHITE + "Ingrese Nombre: "))
+    nombre = (input("Ingrese Nombre: "))
     apellido = (input("Ingrese Apellido: "))
     
     if(nombre.isalpha() and apellido.isalpha() and not nombre.isdigit() and not apellido.isdigit() and len(nombre) > 1 and len(apellido) > 1):
@@ -30,7 +30,7 @@ while (True):
     try:
         
         print(Fore.GREEN + f"{nombre} {apellido}")
-        cuil = int(input(Fore.WHITE +"Ingrese CUIL: "))
+        cuil = int(input(Fore.RESET +"Ingrese CUIL: "))
         break;
     except ValueError:
         os.system("clear")
@@ -40,7 +40,7 @@ os.system("clear")
 
 
 while(True):
-    print(Fore.WHITE + f"{nombre} {apellido} {cuil}")
+    print(Fore.RESET + f"{nombre} {apellido} {cuil}")
     puesto = input("Ingrese el Puesto: ")
     cargo = input("Ingrese el Cargo: ")
     if(cargo.isalpha() and cargo.isalpha()):
@@ -70,7 +70,7 @@ while(comprobacionAñoIngreso):
     while(True):
         try:
             print(Fore.GREEN + f"{nombre} {apellido}")
-            fechaAñoIngreso = int(input(Fore.WHITE + "Ingrese Año de Ingreso: "));
+            fechaAñoIngreso = int(input(Fore.RESET + "Ingrese Año de Ingreso: "));
             fechaMesIngreso = int(input("Ingrese Mes de Ingreso: "));
             fechaDiaIngreso = int(input("Ingrese Dia de Ingreso: "));
             if(fechaAñoIngreso >= 1990 and fechaAñoIngreso and añoAcual and fechaMesIngreso >= 1 and fechaMesIngreso <= 12 and fechaDiaIngreso >= 1 and fechaDiaIngreso <= 33):
@@ -95,7 +95,7 @@ while(comprobacionAñoIngreso):
         
     while(True):
         
-        print(Fore.WHITE + f"{fechaDiaIngreso} - {fechaMesIngreso}- {fechaAñoIngreso}")
+        print(Fore.RESET + f"{fechaDiaIngreso} - {fechaMesIngreso}- {fechaAñoIngreso}")
         print(Fore.YELLOW + "¿Esta seguro de la fecha de ingreso? S/N")
         
         seguroFecha = input("S/N: ");
@@ -119,6 +119,6 @@ while(comprobacionAñoIngreso):
 
 año_de_ingreso = f"{fechaDiaIngreso} {fechaMesIngreso} {fechaAñoIngreso}"
 
-añosAntiguedad =  fechaAñoIngreso - añoAcual;
+añosAntiguedad =  añoAcual - fechaAñoIngreso;
 
 

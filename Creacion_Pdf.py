@@ -25,6 +25,9 @@ contenido = {
              'debu_total_porcentaje': cR.debu_total_porcentaje,
              'debu_Total': cR.debu_Total,
              'cantidad_horas': cR.cantidad_horas,
+             'info_obra_social': cR.info_obra_social,
+             'debu_obra_social_porcentaje': cR.debu_obra_social_porcentaje,
+             'dedu_obra_social_efectivo': cR.dedu_obra_social_efectivo,
              'saldo_Cobrar': cR.saldo_Cobrar
              }
 
