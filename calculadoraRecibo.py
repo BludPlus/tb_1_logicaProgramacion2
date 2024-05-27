@@ -1,9 +1,8 @@
 from datetime import datetime;
 from colorama import Fore;
 import os;
-import locale;
 
-locale.setlocale(locale.LC_ALL, 'es_ES.ISO8859-1')
+
 
 fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
 
@@ -150,10 +149,35 @@ saldo_Cobrar = cuenta - debu_Total + remu_horas_extras;
 
 
 os.system("clear")
+saldo_Cobrar = f"{saldo_Cobrar:,.2f}";
+saldo_Cobrar = saldo_Cobrar.replace(",", "X").replace(".", ",").replace("X", ".")
+print(saldo_Cobrar)
 
-print(remu_horas_extras) #7816.64
-print(cantidad_horas)#8
-print(debu_total_porcentaje) #14
-print(debu_Total) #4020 sindi 14740jubi  18760
+
+def conversion (numero):
+    numero = f"{numero:,.2f}";
+    return numero.replace(",", "X").replace(".", ",").replace("X", ".");
+
+
+
+
+
+remu_horas_extras = conversion(remu_horas_extras);
+
+
+
+debu_Total = conversion(debu_Total)
+
+
+
+dedu_aporte_sindical_efectivo = conversion(dedu_aporte_sindical_efectivo)
+
+dedu_jubilacion_efectivo = conversion(dedu_jubilacion_efectivo)
+dedu_impuestosganancias_efectivo  = conversion(dedu_impuestosganancias_efectivo )
+cuenta = conversion(cuenta);
 print(saldo_Cobrar) #123056.64
 
+print(debu_Total) #4020 sindi 14740jubi  18760
+print(cantidad_horas)#
+print(debu_total_porcentaje) #14
+print(remu_horas_extras) #7816.64

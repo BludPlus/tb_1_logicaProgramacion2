@@ -11,17 +11,21 @@ contenido = {
              'cuil':  dem.cuil,
              'cargo': dem.cargo,
              'puestoTrabajador': dem.puesto,
-             'fechaDeIngreso': dem.fechaIngreso,
+             'fechaDeIngreso': dem.año_de_ingreso,
              'añosAntiguedad': dem.añosAntiguedad,
-             #calculadoraCrecibooo
              'salario_base': cR.cuenta,
              'remu_horas_extras': cR.remu_horas_extras,
-             
+             'cantidad_horas': cR.cantidad_horas,
              'dedu_jubilacion_porcentaje': cR.dedu_jubilacion_porcentaje,
              'dedu_jubilacion_efectivo': cR.dedu_jubilacion_efectivo,
              'dedu_impuestosganancias_porcentaje': cR.dedu_impuestosganancias_porcentaje,
              'dedu_impuestosganancias_efectivo': cR.dedu_impuestosganancias_efectivo,
-             'total_cobro': cR.saldo_Cobrar
+             'dedu_aporte_sindical_porcentaje': cR.dedu_aporte_sindical_porcentaje,
+             'dedu_aporte_sindical_efectivo': cR.dedu_aporte_sindical_efectivo,
+             'debu_total_porcentaje': cR.debu_total_porcentaje,
+             'debu_Total': cR.debu_Total,
+             'cantidad_horas': cR.cantidad_horas,
+             'saldo_Cobrar': cR.saldo_Cobrar
              }
 
 
