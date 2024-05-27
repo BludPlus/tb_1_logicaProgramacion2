@@ -24,13 +24,13 @@ while(True):
     print(Fore.RED + "Ingrese nombre y apellido correctamente")
 
 
-
+os.system('clear')
 cuil = 0;
 while (True):    
     try:
         
-        print(Fore.WHITE + f"{nombre} {apellido}")
-        cuil = int(input("Ingrese CUIL: "))
+        print(Fore.GREEN + f"{nombre} {apellido}")
+        cuil = int(input(Fore.WHITE +"Ingrese CUIL: "))
         break;
     except ValueError:
         os.system("clear")
@@ -51,11 +51,13 @@ os.system("clear")
 
 
 
+
+
 año_de_ingreso = 0;
 fechaAñoIngreso = 0;
 fechaMesIngreso = 0;
 fechaDiaIngreso = 0;
-comprobacionAño = 0;
+
 
 
 
@@ -63,11 +65,11 @@ comprobacionAñoIngreso = True;
 while(comprobacionAñoIngreso):
 
 
-    
+ 
        
     while(True):
         try:
-            print(Fore.WHITE + f"{nombre} {apellido}")
+            print(Fore.GREEN + f"{nombre} {apellido}")
             fechaAñoIngreso = int(input(Fore.WHITE + "Ingrese Año de Ingreso: "));
             fechaMesIngreso = int(input("Ingrese Mes de Ingreso: "));
             fechaDiaIngreso = int(input("Ingrese Dia de Ingreso: "));
