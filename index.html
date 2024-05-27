@@ -8,27 +8,36 @@
     </head>
     <body>
 
-        <div class="h1">
-            <h1 >RECIBO DE HABERES: </h1>
-            <p class="fecha">{{fecha_actual}}</p>
+        <div class="head">
+  
+            <div class="">
+
+                <img class="logo" src="https://imgs.search.brave.com/MQgcAB3umlX5jd1gYoYii79tzqYHs0dxRBMm4-rLTfI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aXRzLmVkdS5hci9p/bWFnZXMvTE9HT19J/VFNfR3Jpcy5qcGc" alt="">
+            </div>
+            <div class="h1">
+
+                <h1 >RECIBO DE HABERES: </h1>
+                <p class="fecha">{{fecha_actual}}</p>
+            </div>
         </div>
         <table border="1">
             
             <thead class="top-info">
+                
                 <tr>
-                    <td colspan="4" class="info"><strong>Información del Empleado:</strong></td>
+                    <td colspan="5" class="info"><strong>Información del Empleado:</strong></td>
                 </tr>
                 
                 <tr>
-                    <td scope="col"><strong>Nombre:</strong></td>
-                    <td>{{nombre}}</td>
+                    <td><strong>Nombre:</strong></td>
+                    <td colspan="2" >{{nombre}}</td>
                     <td scope="col"><strong class="dni">CUIL:</strong></td>
                     <td>{{cuil}}</td>
                 </tr>
                 
                 <tr>
-                    <td scope="col"><strong>Apellido:</strong></td>
-                    <td>{{apellido}}</td>
+                    <td ><strong>Apellido:</strong></td>
+                    <td colspan="2">{{apellido}}</td>
                     <td scope="col"><strong>Fecha de Ingreso: </strong></td>
                     <td>{{fechaDeIngreso}}</td>
                 </tr>
@@ -36,64 +45,82 @@
         
                 <tr>
                     <td scope="col"><strong>Cargo:</strong></td>
-                    <td>{{cargo}}</td>
+                    <td colspan="2">{{cargo}}</td>
                     <td scope="col"><strong>Obra Social</strong></td>
-                    <td>{{obraSocial}}</td>
+                    <td>{{info_obra_social}}</td>
                 </tr>
         
                 <tr>
                     <td><strong>Puesto:</strong></td>
-                    <td>{{puestoTrabajador}}</td>
+                    <td colspan="2">{{puestoTrabajador}}</td>
                     <td><strong>Años Antiguedad</strong></td>
                     <td>{{añosAntiguedad}}</td>
                 </tr>
             </thead>
             <tr>
-                <td colspan="4" class="info"><strong>Detalles de Pago:</strong></td>
+                <td colspan="5" class="info"><strong>Detalles de Pago:</strong></td>
             </tr>
             <tr>
                 <td><strong>CONCEPTO</strong></td>
-                <td class="td"><strong>REMUNERACIONES</strong></td>
-                <td class="td"><strong>DEDUCCIONES EN %</strong></td>
-                <td class="td"><strong>DEDUCCIONES EN $</strong></td>
+                <td><strong>INFORMACION</strong></td>
+                <td><strong>REMUNERACIONES</strong></td>
+                <td><strong>DEDUCCIONES EN %</strong></td>
+                <td><strong>DEDUCCIONES EN $</strong></td>
             </tr>
             <tr>
                 <td>Salario Base</td>
-                <td class="td">{{salario_base}}</td>
+                <td></td>
+                <td class="td">${{salario_base}}</td>
 
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>Horas Extra</td>
-                <td class="td">{{remu_horas_extras}}</td>
+                <td class="td">{{cantidad_horas}}</td>
+                <td class="td">${{remu_horas_extras}}</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>Obra Social</td>
+                <td class="td">{{info_obra_social}}</td>
                 <td></td><!-- REMU --> 
-                <td></td><!-- DEDU EN % -->
-                <td class="td">-{{dedu_horas_extras}}</td><!-- DEDU EN $ -->
+                <td class="td">{{debu_obra_social_porcentaje}}</td><!-- DEDU EN % -->
+                <td class="td">-${{dedu_obra_social_efectivo}}</td><!-- DEDU EN $ -->
+            </tr>
+            <tr>
+                <td>Impuestos Ganancias</td>
+                <td></td>
+                <td></td>
+                <td class="td">{{dedu_impuestosganancias_porcentaje}}</td>
+                <td class="td">-${{dedu_impuestosganancias_efectivo}}</td>
             </tr>
             <tr>
                 <td>Jubilacion</td>
+                <td></td>
                 <td></td><!-- REMU -->
-                <td></td><!-- dedu en % -->
-                <td class="td">-$200</td><!-- dedu en $ -->
+                <td class="td">{{dedu_jubilacion_porcentaje}}</td><!-- dedu en % -->
+                <td class="td">-${{dedu_jubilacion_efectivo}}</td><!-- dedu en $ -->
             </tr>
 
             <tr>
                 <td>Aporte Sindicato</td>
                 <td></td>
                 <td></td>
-                <td class="td">-$200</td>
+                <td class="td">{{dedu_aporte_sindical_porcentaje}}</td>
+                <td class="td">-${{dedu_aporte_sindical_efectivo}}</td>
             </tr>
             <tr>
                 <td><strong>Total</strong></td>
-                <td></td> <!-- REMU -->
-                <td class="td"><strong>$3800</strong></td>
-                <td></td><!-- debu en $ -->
+                <td></td>
+                <td class="td">{{total_remu}}</td> <!-- REMU -->
+                <td class="td">{{debu_total_porcentaje}}</td>
+                <td class="td">-${{debu_Total}}</td><!-- debu en $ -->
+            </tr>
+            </tr>
+                <td ><Strong>Total a Cobrar</Strong></td>
+                <td colspan="4" >${{saldo_Cobrar}}</td>
             </tr>
         </table>
 
