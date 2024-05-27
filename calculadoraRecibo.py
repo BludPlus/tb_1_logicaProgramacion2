@@ -159,6 +159,7 @@ if(aporteS.lower() == "s"):
 
 debu_total_porcentaje = debu_obra_social_porcentaje + dedu_aporte_sindical_porcentaje + dedu_jubilacion_porcentaje + dedu_impuestosganancias_porcentaje;
 debu_Total = dedu_obra_social_efectivo + dedu_jubilacion_efectivo + dedu_aporte_sindical_efectivo + dedu_impuestosganancias_efectivo; 
+total_remu = cuenta + remu_horas_extras
 saldo_Cobrar = cuenta - debu_Total + remu_horas_extras;
 
 
@@ -182,7 +183,7 @@ remu_horas_extras = conversion(remu_horas_extras);
 
 
 debu_Total = conversion(debu_Total)
-
+total_remu = conversion(total_remu)
 
 
 dedu_aporte_sindical_efectivo = conversion(dedu_aporte_sindical_efectivo)
@@ -190,9 +191,10 @@ dedu_aporte_sindical_efectivo = conversion(dedu_aporte_sindical_efectivo)
 dedu_jubilacion_efectivo = conversion(dedu_jubilacion_efectivo)
 dedu_impuestosganancias_efectivo  = conversion(dedu_impuestosganancias_efectivo )
 cuenta = conversion(cuenta);
-print(saldo_Cobrar) #123056.64
 
-print(debu_Total) #4020 sindi 14740jubi  18760
-print(cantidad_horas)#
-print(debu_total_porcentaje) #14
-print(remu_horas_extras) #7816.64
+#print(saldo_Cobrar) #123056.64#
+
+##print(debu_Total) #4020 sindi 14740jubi  18760
+##print(cantidad_horas)#
+#print(debu_total_porcentaje) #14
+#print(remu_horas_extras) #7816.64

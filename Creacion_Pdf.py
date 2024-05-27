@@ -28,6 +28,7 @@ contenido = {
              'info_obra_social': cR.info_obra_social,
              'debu_obra_social_porcentaje': cR.debu_obra_social_porcentaje,
              'dedu_obra_social_efectivo': cR.dedu_obra_social_efectivo,
+             'total_remu': cR.total_remu,
              'saldo_Cobrar': cR.saldo_Cobrar
              }
 
