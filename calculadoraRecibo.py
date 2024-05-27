@@ -1,6 +1,10 @@
 from datetime import datetime;
 from colorama import Fore;
 import os;
+import locale;
+
+locale.setlocale(locale.LC_ALL, 'es_ES.ISO8859-1')
+
 fecha_actual = datetime.today().strftime("%Y-%m-%d %H:%M")
 
 os.system("clear")
@@ -12,7 +16,7 @@ os.system("clear")
 cuenta = 0;
 
 
-saldoaCobrar = 0;
+saldo_Cobrar = 0;
 
 
 while(True):
@@ -79,10 +83,11 @@ while(comHorasEXtras):
                                 pagoal100 = salarioPorHora * 2.0;
                                 pagoHorasExtrasFeriados = pagoal100 * cantidadHorasFeriados;
 
-                                cantidad_horas = cantidad_horas - cantidadHorasFeriados;
+                                cantidad_horas_faltantes =   cantidad_horas - cantidadHorasFeriados;
                                 
                                 pagoal50 = salarioPorHora * 1.5
-                                pagoHorasExtrasNormal = pagoal50 * cantidad_horas; 
+                                pagoHorasExtrasNormal = pagoal50 * cantidad_horas_faltantes; 
+
                                 remu_horas_extras = pagoHorasExtrasNormal + pagoHorasExtrasFeriados
                                 
                                 
@@ -124,20 +129,31 @@ while(comHorasEXtras):
 dedu_jubilacion_porcentaje = 11;
 dedu_jubilacion_efectivo = cuenta * (dedu_jubilacion_porcentaje / 100)
 
-saldoaCobrar  = cuenta - dedu_jubilacion_efectivo;
 
 
 
 
 
-
+os.system("clear")
 dedu_aporte_sindical_porcentaje = 0;
 dedu_aporte_sindical_efectivo = 0;
-aporteS = input("Esta asociado a un sindicato? S/N")
+aporteS = input("Esta asociado a un sindicato? S/N: ")
 if(aporteS.lower() == "s"):
     dedu_aporte_sindical_porcentaje = 3;
-    dedu_aporte_sindical_efectivo = cuenta * (dedu_jubilacion_porcentaje /100)
+    dedu_aporte_sindical_efectivo = cuenta * (dedu_aporte_sindical_porcentaje /100)
     
 
-
+debu_total_porcentaje = dedu_aporte_sindical_porcentaje + dedu_jubilacion_porcentaje + dedu_impuestosganancias_porcentaje;
 debu_Total = dedu_jubilacion_efectivo + dedu_aporte_sindical_efectivo + dedu_impuestosganancias_efectivo; 
+saldo_Cobrar = cuenta - debu_Total + remu_horas_extras;
+
+
+
+os.system("clear")
+
+print(remu_horas_extras) #7816.64
+print(cantidad_horas)#8
+print(debu_total_porcentaje) #14
+print(debu_Total) #4020 sindi 14740jubi  18760
+print(saldo_Cobrar) #123056.64
+

@@ -13,20 +13,16 @@ contenido = {
              'puestoTrabajador': dem.puesto,
              'fechaDeIngreso': dem.fechaIngreso,
              'añosAntiguedad': dem.añosAntiguedad,
-             'salario_base': cR.salario_base,
+             #calculadoraCrecibooo
+             'salario_base': cR.cuenta,
              'remu_horas_extras': cR.remu_horas_extras,
-             'cantidadHoras':cR.cantidadHoras,
+             
              'dedu_jubilacion_porcentaje': cR.dedu_jubilacion_porcentaje,
              'dedu_jubilacion_efectivo': cR.dedu_jubilacion_efectivo,
              'dedu_impuestosganancias_porcentaje': cR.dedu_impuestosganancias_porcentaje,
              'dedu_impuestosganancias_efectivo': cR.dedu_impuestosganancias_efectivo,
-             'total_a_cobrar': cR.total_a_cobrar
+             'total_cobro': cR.saldo_Cobrar
              }
-
-contenido = {'nombre':dem.nombre,
-             'apellido':dem.apellido,
-             'fecha_actual': dem.fecha_actual,
-             'cuil': dem.cuil}
 
 
 #Lectura del directorio y template html con ninja y erea
