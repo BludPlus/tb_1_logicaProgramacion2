@@ -9,13 +9,15 @@ os.system("clear")
 
 
 
-cuenta  = 0;
+cuenta = 0;
+
+
 saldoaCobrar = 0;
-debucciones = 0;
-remuneraciones = 0;
+
+
 while(True):
     try:
-        salario_base = int(input("Ingrese salario: "))
+        salario_base = float(input("Ingrese salario: "))
         cuenta = salario_base;
         break
     except ValueError:
@@ -27,66 +29,106 @@ os.system("clear")
 dedu_impuestosganancias_porcentaje = 0;
 dedu_impuestosganancias_efectivo = 0;
 
+
+
 if(cuenta >= 500000):
     dedu_impuestosganancias_porcentaje = 11;
     dedu_impuestosganancias_efectivo = cuenta * 0.11;
-    dedu_impuestosganancias_efectivo =  round(float(dedu_impuestosganancias_efectivo),2)
-    debucciones = cuenta * 0.11;
+    
+    
 
 
 
 remu_horas_extras = 0;
+pagoHorasExtrasFeriados = 0;
 cantidad_horas = 0;
-while(True):
+
+
+comHorasEXtras = True;
+while(comHorasEXtras):
     
     realizoExtras = input(Fore.WHITE + "Realizo horas extras? S/N \n")
-
+    
     
     remu_horas_extras = 0;
 
     if(realizoExtras.lower() == "s"):
 
         salarioPorDia = cuenta / 30;
-        salarioPorHora = cuenta / 8;
+        salarioPorHora = salarioPorDia / 8;
         
         try:
 
             cantidad_horas  = int(input("Cuantas horas: "))
 
             
+            comFeriados = True;
+            while(comFeriados):
 
-            while(True):
-
-                feriados = input("Tuvo horas extras en dias feriados? S/N")
+                feriados = input("Tuvo horas extras en dias feriados? S/N ")
+                
                 if(feriados.lower() == "s"):
-                    
-                    while(True):
-                        
-                        try:
-                            horasExtras = int(input("Cuantos dias?"));
+                    comHorasFeriados = True;
+                    while(comHorasFeriados):
+                        try: 
+                            
+                            cantidadHorasFeriados = int(input(f"Cuantas de las {cantidad_horas} horas extras fueron feriados? "))
 
-                            pagoHorasExtras = cantidadHoras * salarioPorHora * 1.0;
-                            remu_horas_extras = pagoHorasExtras;
+                            if(cantidadHorasFeriados <= cantidad_horas):
+
+                                pagoal100 = salarioPorHora * 2.0;
+                                pagoHorasExtrasFeriados = pagoal100 * cantidadHorasFeriados;
+
+                                cantidad_horas = cantidad_horas - cantidadHorasFeriados;
+                                
+                                pagoal50 = salarioPorHora * 1.5
+                                pagoHorasExtrasNormal = pagoal50 * cantidad_horas; 
+                                remu_horas_extras = pagoHorasExtrasNormal + pagoHorasExtrasFeriados
+                                
+                                
+
+                                comFeriados = False;
+                                comHorasFeriados = False;
+                                comHorasEXtras = False;
+                                break
+                            else: 
+                                print("ingrese correctamente las horas extras: ")
                         except ValueError:
                             os.system("clear")
-                            print(Fore.RED + "Ingrese dias")
-            break   
-        except ValueError:
+                            print("Ingrese horas")
+
+                elif(feriados.lower() == "n"):
+                    pagoal50 = salarioPorHora * 1.5
+                    
+                    pagoHorasExtrasNormal = pagoal50 * cantidad_horas;
+                    
+                    remu_horas_extras = pagoHorasExtrasNormal;
+                    
+                    comHorasEXtras = False;
+                    break 
+                else:
+                    os.system("clear")      
+                    print("Ingrese S/N")
         
-            os.system("clear")
-            print(Fore.WHITE + "ingrese horas extras correctamente")
-
-
-remuneraciones = remuneraciones + remu_horas_extras;
-os.system("clear")
-
+        except ValueError:
+            os.system("clear") 
+            print("Error ingrese numero")
+    elif(realizoExtras.lower() == "n"):
+        comHorasEXtras = False;
+    else:
+        os.system("clear") 
+        print(Fore.YELLOW +"Ingrese S/N")
 
 
 
 dedu_jubilacion_porcentaje = 11;
-dedu_jubilacion_efectivo = salarioTotal * (dedu_jubilacion_porcentaje / 100)
+dedu_jubilacion_efectivo = cuenta * (dedu_jubilacion_porcentaje / 100)
 
-salarioTotal  = salarioTotal - dedu_jubilacion_efectivo;
+saldoaCobrar  = cuenta - dedu_jubilacion_efectivo;
+
+
+
+
 
 
 dedu_aporte_sindical_porcentaje = 0;
@@ -94,10 +136,8 @@ dedu_aporte_sindical_efectivo = 0;
 aporteS = input("Esta asociado a un sindicato? S/N")
 if(aporteS.lower() == "s"):
     dedu_aporte_sindical_porcentaje = 3;
-    dedu_aporte_sindical_efectivo = salarioTotal * (dedu_jubilacion_porcentaje /100)
-    salarioTotal = salarioTotal - dedu_jubilacion_efectivo;
+    dedu_aporte_sindical_efectivo = cuenta * (dedu_jubilacion_porcentaje /100)
+    
 
 
-
-
-cuenta = salarioTotal;
+debu_Total = dedu_jubilacion_efectivo + dedu_aporte_sindical_efectivo + dedu_impuestosganancias_efectivo; 

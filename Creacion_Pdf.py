@@ -14,13 +14,13 @@ contenido = {
              'fechaDeIngreso': dem.fechaIngreso,
              'añosAntiguedad': dem.añosAntiguedad,
              'salario_base': cR.salario_base,
-            'remu_horas_extras': cR.remu_horas_extras,
-            'cantidadHoras':cR.cantidadHoras,
-            'dedu_jubilacion_porcentaje': cR.dedu_jubilacion_porcentaje,
-            'dedu_jubilacion_efectivo': cR.dedu_jubilacion_efectivo,
-            'dedu_impuestosganancias_porcentaje': cR.dedu_impuestosganancias_porcentaje,
-            'dedu_impuestosganancias_efectivo': cR.dedu_impuestosganancias_efectivo,
-            'total_a_cobrar': cR.total_a_cobrar
+             'remu_horas_extras': cR.remu_horas_extras,
+             'cantidadHoras':cR.cantidadHoras,
+             'dedu_jubilacion_porcentaje': cR.dedu_jubilacion_porcentaje,
+             'dedu_jubilacion_efectivo': cR.dedu_jubilacion_efectivo,
+             'dedu_impuestosganancias_porcentaje': cR.dedu_impuestosganancias_porcentaje,
+             'dedu_impuestosganancias_efectivo': cR.dedu_impuestosganancias_efectivo,
+             'total_a_cobrar': cR.total_a_cobrar
              }
 
 contenido = {'nombre':dem.nombre,
